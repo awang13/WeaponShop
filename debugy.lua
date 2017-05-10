@@ -1,5 +1,7 @@
+require("global")
+
 --debugy
-function load_debug_msg()
+function debug_msg_load()
 	debug1 = ""
 	debug2 = ""
 	debug3 = ""
@@ -11,7 +13,7 @@ function load_debug_msg()
 	debug9 = ""
 end 
 
-function update_debug_msg()
+function debug_msg_draw()
 	love.graphics.setColor(0, 0, 0, 255)
 	love.graphics.print(debug1,10,10)
 	love.graphics.print(debug2,10,25)

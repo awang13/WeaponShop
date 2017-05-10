@@ -1,6 +1,8 @@
 --window settings
-function load_window_settings()
-	love.window.setMode(800,600)
-	love.window.setTitle("Weapon Shop v0.01")
+require("global")
+
+function window_settings_load()
+	love.window.setMode( shop.window_width , shop.window_height )
+	love.window.setTitle( shop.window_title )
 	love.graphics.setBackgroundColor(255, 255, 250)
 end
