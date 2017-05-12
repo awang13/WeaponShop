@@ -3,49 +3,35 @@ require("global")
 require("player")
 require("debugy")
 require("window_settings")
+require("config")
+require("dungeon")
+require("adventurer")
 
 function love.load()
   debug_msg_load()
-  window_settings_load()
+  window_load()
   player_load()
+  dungeon_load()
+  adventurer_load()
 end 
 
 function love.update()
-  player_update()
   debug2 = "fps: "..love.timer.getFPS()
-  debug3 = player.width
+  debug3 = "dungeon level: "..dungeon.level
+  player_update()
+  dungeon_update()
+  adventurer_update()
+  
 end
 
 function love.draw()
-  debug_msg_draw()
+  
+  window_draw()
   player_draw()
+  dungeon_draw()
+  adventurer_draw()
+  
+  debug_msg_draw()
 end 
 
-function love.keypressed(key, u)
-  --Debug
-  debug1 = "input = "..key
-  
-  if key == "w" then 
-    --move up 
-  end 
 
-  if key == "a" then 
-    --move left 
-  end 
-
-  if key == "s" then 
-    --move down 
-  end 
-
-  if key == "d" then 
-    --move right 
-  end 
-
-  if key == "space" then 
-    --action 
-  end 
-
-  if key == "escape" then --set to whatever key you want to use
-   	love.event.quit()
-  end 		
-end

@@ -14,7 +14,7 @@ function debug_msg_load()
 end 
 
 function debug_msg_draw()
-	love.graphics.setColor(0, 0, 0, 255)
+	love.graphics.setColor(255, 255, 255, 255)
 	love.graphics.print(debug1,10,10)
 	love.graphics.print(debug2,10,25)
 	love.graphics.print(debug3,10,40)
